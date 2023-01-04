@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     width: 390px;
 }
 
@@ -11,6 +13,7 @@ header {
     background-color: #CF2B2B;
     position: fixed;
     top: 0;
+    z-index: 1;
 }
 
 header h1 {
@@ -36,6 +39,14 @@ main {
     margin-top: 92px;
     padding-top: 31px;
     padding-left: 19px;
+    width: 100%;
+}
+.container-principal {
+    width: 100%;
+}
+
+.itens-pratos {
+    width: 100%;
 }
 
 .itens-pratos h1{
@@ -49,6 +60,7 @@ main {
 .container-pratos {
     display: flex;
     overflow-x: scroll;
+    width: 100%;
 }
 
 .container-pratos div {
@@ -93,6 +105,10 @@ main {
     margin-bottom: 5px;
 }
 
+.itens-bebidas {
+    width: 100%;
+}
+
 .itens-bebidas h1{
     color: #333333;
     font-family: 'Righteous', cursive;
@@ -105,6 +121,7 @@ main {
 .container-bebidas {
     display: flex;
     overflow-x: scroll;
+    width: 100%;
 }
 
 .container-bebidas div {
@@ -147,4 +164,89 @@ main {
     font-size: 15px;
     margin-left: 14px;
     margin-bottom: 5px;
+}
+
+.itens-sobremesas {
+    width: 100%;
+}
+
+.itens-sobremesas h1{
+    color: #333333;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 26px;
+    margin-top: 30px;
+    margin-bottom: 17px;
+}
+
+.container-sobremesas {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 109px;
+}
+
+.container-sobremesas div {
+    background-color: #FFFFFF;
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 16px;
+    width: 172px;
+}
+
+.container-sobremesas div img {
+    width: 144px;
+    border-radius: 4px;
+    margin: 18px 14px 8px 14px;
+}
+
+.container-sobremesas div h3 {
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-bottom: 4px;
+}
+
+.container-sobremesas div h4 {
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-bottom: 13px;
+}
+
+.container-sobremesas div p{
+    color: #A6A6A6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 14px;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 92px;
+    position: fixed;
+    bottom: 0;
+}
+
+footer button{
+    background-color: #CBCBCB;
+    border-radius: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 364px;
+    height: 61px;
 }
