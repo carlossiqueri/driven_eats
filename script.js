@@ -3,14 +3,11 @@ function selecionaPrato (pratoSelecionado) {
 
     if(pratoAnterior !== null) {
         pratoAnterior.classList.remove('selecionado');
+        pratoAnterior.querySelector('.checkmark').classList.add('hidden');
     }
 
     const prato = document.querySelector(pratoSelecionado);
     prato.classList.add('selecionado');
-
-    const check = document.querySelectorAll('.hidden');
-    console.log(check);
-
-
+    prato.querySelector('.hidden').classList.remove('hidden');
 
 }
