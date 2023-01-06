@@ -9,5 +9,5 @@ function selecionaPrato (pratoSelecionado) {
     const prato = document.querySelector(pratoSelecionado);
     prato.classList.add('selecionado');
     prato.querySelector('.hidden').classList.remove('hidden');
-
 }
+
