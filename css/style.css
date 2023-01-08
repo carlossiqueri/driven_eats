@@ -131,6 +131,7 @@ main {
     flex-direction: column;
     margin-right: 16px;
     max-width: 172px;
+    position: relative;
 }
 
 .container-bebidas div img {
@@ -193,6 +194,7 @@ main {
     flex-direction: column;
     margin-right: 16px;
     max-width: 172px;
+    position: relative;
 }
 
 .container-sobremesas div img {
@@ -261,7 +263,7 @@ footer button{
     height: 19px;
     position: absolute;
     bottom: 4px;
-    left: 68px;
+    left: 69px;
 }
 
 .hidden {
