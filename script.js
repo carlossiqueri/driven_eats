@@ -7,6 +7,8 @@ let nomeBebida;
 let precoSobremesa;
 let nomeSobremesa;
 
+let precoPedido;
+
 function selecionaPrato (pratoSelecionado) {
     const pratoAnterior = document.querySelector('.container-pratos .selecionado');
 
@@ -20,13 +22,10 @@ function selecionaPrato (pratoSelecionado) {
     pratoSelecionado.querySelector('.hidden').classList.remove('hidden');
 
     nomePrato = pratoSelecionado.querySelector('h3').innerHTML;
-    console.log(nomePrato);
-    precoPrato = pratoSelecionado.querySelector('b').innerHTML;
-    console.log(precoPrato)
+    precoPrato = pratoSelecionado.querySelector('b').innerHTML.replace(',', '.');
 
     verificaPedidos();
 }
-
 
 function selecionaBebida(bebidaSelecionada) {
     const bebidaAnterior = document.querySelector('.container-bebidas .selecionado');
@@ -40,9 +39,7 @@ function selecionaBebida(bebidaSelecionada) {
     bebidaSelecionada.querySelector('.hidden').classList.remove('hidden')
 
     nomeBebida = bebidaSelecionada.querySelector('h3').innerHTML;
-    console.log(nomeBebida);
-    precoBebida = bebidaSelecionada.querySelector('b').innerHTML;
-    console.log(precoBebida)
+    precoBebida = bebidaSelecionada.querySelector('b').innerHTML.replace(',', '.');
 
     verificaPedidos();
 }
@@ -60,21 +57,35 @@ function selecionaSobremesa(sobremesaSelecionada) {
 
 
     nomeSobremesa = sobremesaSelecionada.querySelector('h3').innerHTML;
-    console.log(nomeSobremesa);
-    precoSobremesa = sobremesaSelecionada.querySelector('b').innerHTML;
-    console.log(precoSobremesa)
+    precoSobremesa = sobremesaSelecionada.querySelector('b').innerHTML.replace(',', '.');
 
     verificaPedidos();
 }
+
 
 function verificaPedidos() {
     if (nomeBebida !== undefined){
         if (nomePrato !== undefined){
             if (nomeSobremesa !== undefined){
-                console.log('verificado');
                 const botaoFecharPedido = document.querySelector('button').classList.add('botão-selecionado');
                 document.querySelector('button p').innerHTML = 'Fechar Pedido';
-            }
-        }      
-    }
+                document.querySelector('button').removeAttribute("disabled");
+
+
+                precoPedido = Number(precoBebida) + Number(precoPrato) + Number(precoSobremesa);
+                precoPedido = precoPedido.toFixed(2);
+    } 
 }
+}
+}
+
+function fechaPedido() {
+    let mensagem = `Olá, gostaria de fazer o pedido:\n 
+    - Prato: ${nomePrato}\n
+    - Bebida: ${nomeBebida}\n
+    - Sobremesa: ${nomeSobremesa}\n
+    - Total: R$ ${precoPedido}`
+    
+    mensagem = window.encodeURIComponent(mensagem);
+    window.open(`https://wa.me/5555999999999?text=${mensagem}`);
+}   
