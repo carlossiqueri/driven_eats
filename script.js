@@ -97,7 +97,7 @@ function fechaPedido() {
     - Prato: ${nomePrato}\n
     - Bebida: ${nomeBebida}\n
     - Sobremesa: ${nomeSobremesa}\n
-    - Total: R$ ${precoPedido.replace(".", ",")}`;
+    Total: R$ ${precoPedido.replace(".", ",")}`;
 
   mensagem = window.encodeURIComponent(mensagem);
   window.open(`https://wa.me/5555999999999?text=${mensagem}`);
