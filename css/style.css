@@ -40,6 +40,7 @@ main {
     margin-left: 19px;
     width: 100vw;
 }
+
 .container-principal {
     width: 100vw;
 }
@@ -67,6 +68,7 @@ main {
     border-radius: 9px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 16px;
     max-width: 172px;
     position: relative;
@@ -129,6 +131,7 @@ main {
     border-radius: 9px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 16px;
     max-width: 172px;
     position: relative;
@@ -192,6 +195,7 @@ main {
     border-radius: 9px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     margin-right: 16px;
     max-width: 172px;
     position: relative;
@@ -261,6 +265,7 @@ footer button{
 }
 
 .checkmark {
+    width: auto;
     height: 19px;
     position: absolute;
     bottom: 4px;
